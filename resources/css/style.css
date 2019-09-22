@@ -5,11 +5,26 @@ html {
     font-size: 16px;
     color: #01161E;
   }
+
+  main {
+    font-family: "Open Sans", sans-serif;
+    position:relative;    /* handle fixed menu bar */
+    top: 4rem;
+    color: #01161E;
+  }
   h3 {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     line-height: 1.2;
     font-weight: bold;
+  }
+
+  section:nth-child(2n+1) {
+    background-color: orange;
+  }
+  
+  section {
+    width: auto 0;
   }
 
   a {
@@ -20,9 +35,40 @@ html {
     font-size: 1.25rem;
   }
 
+  h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 2rem 0;
+  }
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+  h5, footer span {
+    font-size: 0.8rem;
+    color: #01161E;
+  }
+
+  p {
+    line-height: 1.35;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+  }
+
 /* Header Section */
 header {
-    background-color: #fffcfc;
+    background-color: lightgreen;
     font-size: 4rem;
     display: flex;
     width: 100%;
@@ -55,7 +101,7 @@ header img {
   /* Navigation */
 nav {
     padding-right: 3%;
-    align-items: center;
+    align-self: center;
     display: flex;
 }
 
@@ -65,4 +111,104 @@ nav {
 
 .mobile {
     display: none;
+}
+
+/*start banner*/
+
+.side-text {
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.landing-container img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  margin: 2rem 2.5rem 2rem 1.5rem;
+  flex-shrink: 0;
+}
+
+.landing-container h3 {
+  margin: 1.5rem 0;
+}
+
+.landing-container .side-text {
+  width: 30%;
+  box-sizing: border-box;
+}
+
+
+/* Start Here Button */
+
+.start {
+  width: 75%;
+  background-color: #ADBED3;
+  color: #01161E;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  text-align: center;
+  transition:color 400ms, background-color 400ms;
+  font-weight: bold;
+}
+
+.start:hover {
+  background-color: #FF7954;
+  color: #01161E;
+}
+
+.information .content-box:last-child, .thesis .content-box:first-child {
+  background-color: #EEF9ED;
+}
+/* large containers */
+
+.multi-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.main-pic-box {
+    width: 60%;
+    padding: 2rem 1.5rem;
+}
+
+.main-pic-box img, video {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.main-pic-box h2 {
+  padding-bottom: 1.5rem;
+}
+
+#mobile-pic {
+  display: none;
+}
+
+/* Small Containers */
+
+.stacked-content-box {
+  display: flex;
+  flex-flow: column;
+  vertical-align: top;
+  margin-top: 1rem;
+  width: 35%;
+}
+
+.content-box img {
+  width: 35%;
+  margin: 3.5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.content-box .side-text {
+  width: 56%
+}
+
+.content-box a {
+  color: #FF7954;
+  padding: 0;
 }
